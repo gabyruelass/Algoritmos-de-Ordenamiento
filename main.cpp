@@ -7,7 +7,7 @@
 using namespace std;
 
 
-void printArray(const vector<int>& arr) {
+void imprimirArray(const vector<int>& arr) {
   for (int x : arr) cout << x << " ";
   cout << endl;
 }
@@ -20,8 +20,8 @@ int main() {
   for (int i = 0; i < n; i++) original[i] = rand() % 100;
 
 
-  cout << "Vector original: ";
-  printArray(original);
+  cout << "Primervector: ";
+  imprimirArray(original);
 
 
   vector<int> expected = original;
@@ -30,32 +30,32 @@ int main() {
 
   vector<int> a = original;
   bubbleSort(a);
-  cout << "Bubble Sort: "; printArray(a);
-  cout << (a == expected ? "OK\n" : "ERROR\n");
+  cout << "Bubble Sort: "; imprimirArray(a);
+  cout << (a == expected ? "Bien\n" : "ERRROR\n");
 
 
   a = original;
   selectionSort(a);
-  cout << "Selection Sort: "; printArray(a);
-  cout << (a == expected ? "OK\n" : "ERROR\n");
+  cout << "Selection Sort: "; imprimirArray(a);
+  cout << (a == expected ? "Bien\n" : "ERROR\n");
 
 
   a = original;
   insertionSort(a);
-  cout << "Insertion Sort: "; printArray(a);
-  cout << (a == expected ? "OK\n" : "ERROR\n");
+  cout<< "Insertion Sort: "; imprimirArray(a);
+  cout<< (a == expected ? "Bien\n" : "ERROR\n");
 
 
   a = original;
   mergeSort(a, 0, n - 1);
-  cout << "Merge Sort: "; printArray(a);
-  cout << (a == expected ? "OK\n" : "ERROR\n");
+  cout << "Merge Sort: "; imprimirArray(a);
+  cout << (a == expected ? "Bien\n" : "ERROR\n");
   
   
   a = original;
   quickSort(a, 0, n - 1);
-  cout << "Quick Sort: "; printArray(a);
-  cout << (a == expected ? "OK\n" : "ERROR\n");
+  cout<< "Quick Sort: "; imprimirArray(a);
+  cout <<(a == expected ? "Bien\n" : "ERROR\n");
 
 
 return 0;
