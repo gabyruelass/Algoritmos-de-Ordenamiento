@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-bool showSteps = false; // poner true si quieres ver pasos
+bool mostrarPasos = false; 
 
 
 void bubbleSort(vector<int>& arr) {
@@ -39,7 +39,7 @@ void insertionSort(vector<int>& arr) {
     }
 }
 
-void merge(vector<int>& arr, int left, int mid, int right) {
+void mergeSot(vector<int>& arr, int left, int mid, int right) {
     int n1 = mid - left + 1;
     int n2 = right - mid;
     vector<int> L(n1), R(n2);
@@ -54,7 +54,7 @@ void merge(vector<int>& arr, int left, int mid, int right) {
     while (j < n2) arr[k++] = R[j++];
 }
 
-int partition(vector<int>& arr, int low, int high) {
+int dividir(vector<int>& arr, int low, int high) {
     int pivot = arr[high];
     int i = low - 1;
     for (int j = low; j < high; j++) {
@@ -66,7 +66,7 @@ int partition(vector<int>& arr, int low, int high) {
 
 void quickSort(vector<int>& arr, int low, int high) {
     if (low < high) {
-        int pi = partition(arr, low, high);
+        int pi = dividir(arr, low, high);
         quickSort(arr, low, pi - 1);
         quickSort(arr, pi + 1, high);
     }
